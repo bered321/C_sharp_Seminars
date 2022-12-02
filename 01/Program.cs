@@ -54,7 +54,65 @@ while (i < n)
 }*/
 
 //Задача 7
-Console.Clear();
+/*Console.Clear();
 Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.Write(n % 10);
+Console.Write(n % 10);*/
+
+//Задача 10
+/*Console.Clear();
+
+int n = new Random().Next(10, 100);
+Console.WriteLine($"Случайное число: {n}");
+int n1 = n / 10;
+int n2 = n % 10;
+if (n1 > n2)
+    Console.WriteLine(n1);
+else
+    Console.WriteLine(n2);*/
+
+//Задача 11
+/*Console.Clear();
+
+int n = new Random().Next(100, 1000);
+Console.WriteLine($"Случайное число: {n}");
+int n1 = n / 100;
+int n2 = n % 10;
+Console.WriteLine(n1*10+n2);*/
+
+//
+/*Console.Clear();
+string? s = Console.ReadLine();
+Console.WriteLine(Convert.ToInt32(s[0].ToString()));*/
+
+//Задача 12
+/*Console.Clear();
+Console.Write("Введите первое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
+if (a % b != 0)
+    Console.WriteLine($"не кратно, остаток {a%b}");
+else
+    Console.WriteLine("кратно");*/
+
+//Задача 14
+/*Console.Clear();
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+if (a % 7 == 0 && a % 23 == 0)
+    Console.WriteLine("Число кратно 7 и 23");
+else
+    Console.WriteLine("Число не кратно 7 и 23 одновременно");*/
+
+//Задача 16
+Console.Clear();
+Console.Write("Введите первое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
+if (a*a==b || b*b==a )
+    Console.WriteLine("да");
+else
+    Console.WriteLine("нет");
+
