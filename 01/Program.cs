@@ -106,7 +106,7 @@ else
     Console.WriteLine("Число не кратно 7 и 23 одновременно");*/
 
 //Задача 16
-Console.Clear();
+/*Console.Clear();
 Console.Write("Введите первое число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
@@ -114,5 +114,68 @@ int b = Convert.ToInt32(Console.ReadLine());
 if (a*a==b || b*b==a )
     Console.WriteLine("да");
 else
-    Console.WriteLine("нет");
+    Console.WriteLine("нет");*/
 
+//Задача 17
+/*Console.Clear();
+Console.Write("Введите координату X: ");
+double x = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату Y: ");
+double y = Convert.ToDouble(Console.ReadLine());
+
+while (x == 0)
+{
+    Console.WriteLine("Вы ошиблись! \nВведите координату X: ");
+    x = Convert.ToDouble(Console.ReadLine());
+}
+while (y == 0)
+{
+    Console.WriteLine("Вы ошиблись! \nВведите координату Y: ");
+    y = Convert.ToDouble(Console.ReadLine());
+}
+if (x > 0 && y > 0)
+    Console.WriteLine("I");
+else if (x < 0 && y > 0)
+    Console.WriteLine("II");
+else if (x < 0 && y < 0)
+    Console.WriteLine("III");
+else
+    Console.WriteLine("IV");*/
+
+//Задача 18
+/*Console.Clear();
+Console.Write("Введите номер четверти: ");
+int chetvert = Convert.ToInt32(Console.ReadLine());
+while (chetvert < 1 || chetvert > 4)
+{
+    Console.WriteLine("Вы ошиблись! \nВведите номер четверти: ");
+    chetvert = Convert.ToInt32(Console.ReadLine());
+}
+if (chetvert == 1 || chetvert == 2)
+    Console.WriteLine("y > 0");
+else 
+    Console.WriteLine("y < 0");
+if (chetvert == 1 || chetvert == 4)
+    Console.WriteLine("x > 0");
+else 
+    Console.WriteLine("x < 0");*/
+
+//Задача 20
+/*Console.Clear();
+Console.Write("Введите координату X первой точки: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату Y первой точки: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату X второй точки: ");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату Y второй точки: ");
+double y2 = Convert.ToDouble(Console.ReadLine());
+double l = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow((y1 - y2), 2));
+Console.WriteLine($"Расстояние между точками: {l}");*/
+
+//Задача 22
+/*Console.Clear();
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+for (int i = 1; i <= a; i++)
+    Console.Write($"{Math.Pow(i, 2)} ");*/
