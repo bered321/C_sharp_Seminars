@@ -12,10 +12,10 @@ int N = forward.ToString().Length - 1;
 string b = forward.ToString();
 for (int i = 0; i < N / 2; i++)
 {
-    if (b[i] != b[N - i])
-        palindrom = 0;
-    else
+    if (b[i] == b[N - i])
         palindrom = 1;
+    else
+        palindrom = 0;
 }
 if (palindrom == 1)
     Console.WriteLine("Число является палиндромом");
