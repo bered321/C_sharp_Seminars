@@ -1,5 +1,4 @@
-﻿using System;
-Console.Clear();
+﻿Console.Clear();
 Console.Write("Введите пятизначное число: ");
 int forward = Convert.ToInt32(Console.ReadLine());
 while (forward < 10000 || forward >= 100000)
