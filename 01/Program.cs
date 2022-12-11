@@ -221,22 +221,64 @@ for (int i = 1; i <= a; i++)
 //Функции
 // Необходимо вывести наибольшее число из 2-х
 
-char test(int a, int b)
-{
-if (a > b)
-return '>';
-return '<';
-}
+// char test(int a, int b)
+// {
+// if (a > b)
+// return '>';
+// return '<';
+// }
 
-Console.Clear();
-Console.Write("Введите 1-ое число: ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите 2-ое число: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(test(n, m));
-// 1. return
-// * Возвращает аргумент туда, где была вызвана функция
-// * Завершает работу функции
-// * Возвращаемое значение необходимо принимать в консоль(вывод) или в переменную нужного типа данных
-// * Сколько аргументов мы принимаем, столько и передаем
+// Console.Clear();
+// Console.Write("Введите 1-ое число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите 2-ое число: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(test(n, m));
+// // 1. return
+// // * Возвращает аргумент туда, где была вызвана функция
+// // * Завершает работу функции
+// // * Возвращаемое значение необходимо принимать в консоль(вывод) или в переменную нужного типа данных
+// // * Сколько аргументов мы принимаем, столько и передаем
+
+//Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 
+// Console.Clear();
+// Console.Write("Введите число: ");
+// double n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine((1 + n) / 2 * n); // Через формулу геометрической прогрессии Sn=((A1+An)/2)*n
+
+//Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+//
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+// while (n > 0)
+// {
+//     count++;
+//     n /= 10;
+// }
+// Console.WriteLine(count);
+
+//Задача 28: Найти чему равен факториал числа
+//
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int result = 1;
+// for (int i = 2; i <= n; i++)
+// {
+//     result = result * i;
+// }
+// Console.WriteLine($"Факториал числа равен {result}");
+
+//Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке
+// //
+// Console.Clear();
+// int[] array = new int[8];
+// for (int i = 0; i < array.Length; i++)
+// {
+// array[i] = new Random().Next(0, 2);
+// }
+// Console.WriteLine($"[{string.Join(", ", array)}]");
 
