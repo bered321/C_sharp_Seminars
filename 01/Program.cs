@@ -179,3 +179,64 @@ Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 for (int i = 1; i <= a; i++)
     Console.Write($"{Math.Pow(i, 2)} ");*/
+
+
+//Методы - это обънетно-ориентированное программирование
+
+//Массивы
+//Целые числа
+
+// Console.Clear();
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// for (int i = 0; i < array.Length; i++)
+// array[i] = new Random().Next(1, 11); // Заполняет числами от 1 до 10, 11 не входит в диапозон заполнения
+// Console.WriteLine($"[{string.Join(", ", array)}]"); // Выводит наш массив через запятую в одну строку (Join)
+
+//Дробные числа
+
+// Console.Clear();
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double[] array = new double[n];
+// for (int i = 0; i < array.Length; i++)
+// array[i] = new Random().NextDouble(); // Генерирует дробную часть от 0 да 1
+// Console.WriteLine($"[{string.Join(", ", array)}]");
+
+//Дробные с целой частью
+
+// Console.Clear();
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double[] array = new double[n];
+// for (int i = 0; i < array.Length; i++)
+// {
+//                                             // * (end - begin) + begin
+// array[i] = Math.Round(new Random().NextDouble() * (50 - 10) + 10, 2); // Целая часть от 10 до 50
+// }
+// Console.WriteLine($"[{string.Join(", ", array)}]");
+
+
+//Функции
+// Необходимо вывести наибольшее число из 2-х
+
+char test(int a, int b)
+{
+if (a > b)
+return '>';
+return '<';
+}
+
+Console.Clear();
+Console.Write("Введите 1-ое число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите 2-ое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(test(n, m));
+// 1. return
+// * Возвращает аргумент туда, где была вызвана функция
+// * Завершает работу функции
+// * Возвращаемое значение необходимо принимать в консоль(вывод) или в переменную нужного типа данных
+// * Сколько аргументов мы принимаем, столько и передаем
+

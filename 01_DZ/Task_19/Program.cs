@@ -8,12 +8,15 @@ while (forward < 10000 || forward >= 100000)
     forward = Convert.ToInt32(Console.ReadLine());
 }
 string b = forward.ToString();
-for (int i = 0; i < (forward.ToString().Length - 1) / 2; i++)
+for (int i = 0; i < (forward.ToString().Length - 1); i++)
 {
-    if (b[i] == b[forward.ToString().Length - 1 - i])
-        palindrom = 1;
-    else
+    if (b[i] != b[forward.ToString().Length - 1 - i])
+    {
         palindrom = 0;
+        break;
+    }
+    else
+        palindrom = 1;
 }
 if (palindrom == 1)
     Console.WriteLine("Число является палиндромом");
