@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.Clear();
+Console.Write("Введите количество элементов массива : ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[n];
+for (int i = 0; i < n; i++)
+{
+    Console.Write($"Введите {i+1}-й элемент массива: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.WriteLine();
+Console.WriteLine($"[{string.Join(", ", array)}]");
