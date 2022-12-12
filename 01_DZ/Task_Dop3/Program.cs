@@ -23,7 +23,7 @@ if (k > 0)
         array[0] = temp;
     }
 }
-else if (k < 0)
+else 
 {
     k = k * (-1);
     k %= n;
