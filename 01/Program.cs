@@ -384,3 +384,76 @@ for (int i = 1; i <= a; i++)
 // InputArray(array);
 // Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
 // Console.WriteLine($"Конечный массив: [{string.Join(", ", ReleaseArray(array))}]");
+
+// int[] s =Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray(); //в одну строчку через пробел
+// foreach (int element in s) // пройтись по всему массиву без привязки к номеру элемента
+
+// void InputArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//         array[i] = new Random().Next(1, 11); // [1, 10]
+// }
+// void ReleaseArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length / 2; i++)
+//     {
+//         int tmp = array[i];
+//         array[i] = array[array.Length - 1 - i];
+//         array[array.Length - 1 - i] = tmp;
+//     }
+// }
+
+// Console.Clear();
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// InputArray(array);
+// Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+// ReleaseArray(array);
+// Console.WriteLine($"Конечный массив: [{string.Join(", ", array)}]");
+
+//Задача 40
+// Console.Clear();
+// Console.Write("Введите 1-ю длину: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите 2-ю длину: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите 3-ю длину: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+// if (a + b > c && a + c > b && b + c > a)
+//     Console.Write("Такой треугольник существует");
+// else
+//     Console.Write("Такой треугольник не существует");
+
+//Задача 42
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// string b = string.Empty;
+// while (a > 0)
+// {
+//     b = Convert.ToString(a % 2) + b;
+//     a /= 2;
+// }
+// Console.WriteLine(b);
+
+//Задача 44
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine()), a0 = 1, a1 = 1;
+// for (int i = 0; i < n; i++)
+// {
+//     Console.Write($"{a0} ");
+//     int x = a0 + a1;
+//     a0 = a1;
+//     a1 = x;
+// }
+
+//Задача 45
+int[] a = { 1, 2, 3, 4, 5 };
+int[] b = a;
+for (int i = 0; i < a.Length; i++)
+    b[i] = a[i];
+b[0] = -1;
+Console.WriteLine($"{string.Join(", ", a)}");
+Console.WriteLine($"{string.Join(", ", b)}");
