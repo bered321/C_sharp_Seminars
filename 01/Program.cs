@@ -450,10 +450,131 @@ for (int i = 1; i <= a; i++)
 // }
 
 //Задача 45
-int[] a = { 1, 2, 3, 4, 5 };
-int[] b = a;
-for (int i = 0; i < a.Length; i++)
-    b[i] = a[i];
-b[0] = -1;
-Console.WriteLine($"{string.Join(", ", a)}");
-Console.WriteLine($"{string.Join(", ", b)}");
+// int[] a = { 1, 2, 3, 4, 5 };
+// int[] b = a;
+// for (int i = 0; i < a.Length; i++)
+//     b[i] = a[i];
+// b[0] = -1;
+// Console.WriteLine($"{string.Join(", ", a)}");
+// Console.WriteLine($"{string.Join(", ", b)}");
+
+// double n = new Random().NextDouble() * (end - begin) + begin
+//Console.WriteLine(new Random().NextDouble() * (10 + 10) - 10); // ДРОБНЫЕ ОТРИЦАТЕЛЬНЫЕ!!! [-10, 10] 
+
+
+// //Задача 46. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(-10, 11); // [-10, 10]
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// Console.Clear();
+// Console.Write("Введите размеры матрицы: ");
+// int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// InputMatrix(matrix);
+
+
+// //Задача 48. Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             //matrix[i, j] = new Random().Next(-10, 11); // [-10, 10]
+//             matrix[i, j] = i + j;
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// Console.Clear();
+// Console.Write("Введите размеры матрицы: ");
+// int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// InputMatrix(matrix);
+
+
+// //Задача 49. Задайте двумерный массив. Найдите элементы, у которых оба индекса нечетные, и замените эти элементы на их квадраты.
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(-10, 11); // [-10, 10]
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// void ReleaseMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         if (i % 2 == 1)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 if (j % 2 == 1)
+//                     matrix[i, j] *= matrix[i, j];
+//             }
+//         }
+//     }
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//             Console.Write($"{matrix[i, j]} \t");
+//         Console.WriteLine();
+//     }       
+// }
+// Console.Clear();
+// Console.Write("Введите размеры матрицы: ");
+// int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// InputMatrix(matrix);
+// Console.WriteLine();
+// ReleaseMatrix(matrix);
+  
+
+//Задача 51. Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(-10, 11); // [-10, 10]
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int ReleaseMatrix(int[,] matrix)
+// {
+//     int result = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (j == i)
+//                 result += matrix[i, j];
+//         }
+//     }
+//     return result;
+// }
+// Console.Clear();
+// Console.Write("Введите размеры матрицы: ");
+// int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[size[0], size[1]];
+// InputMatrix(matrix);
+// Console.WriteLine();
+// Console.WriteLine(ReleaseMatrix(matrix));
