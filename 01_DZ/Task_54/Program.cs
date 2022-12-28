@@ -37,7 +37,6 @@ int[,] SortMatrix(int[,] matrix)
     return matrix;
 }
 
-
 Console.Clear();
 Console.Write("Введите размер матрицы: ");
 int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
