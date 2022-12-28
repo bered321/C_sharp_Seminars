@@ -22,7 +22,7 @@ int[,] MultiplicationMatrix(int[,] matrix1, int[,] matrix2)
     int[,] resultMatrix = new int[2, 2];
     for (int i = 0; i < matrix1.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix1.GetLength(1); j++)
+        for (int j = 0; j < matrix1.GetLength(1); j++)      //по правилам математики for (int j = 0; j < matrix2.GetLength(1); j++)  
         {
             resultMatrix[i, j] = 0;                                 //как просили на семинаре
             resultMatrix[i, j] += matrix1[i, j] * matrix2[i,j];

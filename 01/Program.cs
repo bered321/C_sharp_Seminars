@@ -543,7 +543,7 @@ for (int i = 1; i <= a; i++)
 // InputMatrix(matrix);
 // Console.WriteLine();
 // ReleaseMatrix(matrix);
-  
+
 
 //Задача 51. Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
 // void InputMatrix(int[,] matrix)
@@ -781,55 +781,133 @@ for (int i = 1; i <= a; i++)
 // SwapFirstLastString(matrix, array, count);
 
 //// Задача 59. Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.
-void InputMatrix(int[,] matrix)
+// void InputMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(1, 11); // [1, 10]
+//             Console.Write($"{matrix[i, j]} \t");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// void SwapFirstLastString(int[,] matrix)
+// {
+//     int minValue = matrix[0, 0], minRow = 0, minColumn = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (minValue > matrix[i, j])
+//             {
+//                 minValue = matrix[i, j];
+//                 minRow = i;
+//                 minColumn = j;
+//             }
+//         }
+//     }
+//     Console.WriteLine($"{minValue}({minRow}, {minColumn}) - минимум");   
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         if (i != minRow)
+//         {
+//             for (int j = 0; j < matrix.GetLength(1); j++)
+//             {
+//                 if (j != minColumn)
+//                     Console.Write($"{matrix[i, j]} \t");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
+// Console.Clear();
+// Console.Write("Введите размер матрицы: ");
+// int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int[,] matrix = new int[coord[0], coord[1]];
+// Console.WriteLine("Начальный массив");
+// InputMatrix(matrix);
+// Console.WriteLine("Конечный массив");
+// SwapFirstLastString(matrix);
+
+
+
+//                                                      РЕКУРСИЯ!!!!!!!!!!!!!!!!
+
+//// Простая задача на рекурсию. Произвести сложение без сложения используя только +1 и -1.
+// int sum(int a, int b)
+// {
+// if (b == 0)
+// return a;
+// return sum(a + 1, b - 1);
+// }
+// Console.Clear();
+// Console.Write("Введите 1-ое число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите 2-ое число: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(sum(n, m));
+
+//// Задача. Дана последовательность чисел завершаюшаяся числом 0. Найдите сумму всех этих чисел не используя цикл.
+// int sum()
+// {
+// int x = Convert.ToInt32(Console.ReadLine());
+// if (x == 0)
+// return 0;
+// return sum() + x;
+// }
+// Console.Clear();
+// Console.WriteLine(sum());
+
+// // Задача 63. Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// string rec(int n)
+// {
+//     if (n == 1)
+//         return "1 ";
+//     return $"{n} " + rec(n - 1);
+// }
+// Console.Clear();
+// Console.Write("Введите число n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(rec(n));
+
+// // Задача 65. Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// string rec(int m, int n)
+// {
+//     if (m == n)
+//         return $"{n}";
+//     return $"{m} " + rec(m + 1, n);
+// }
+// Console.Clear();
+// Console.Write("Введите число m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(rec(m, n));
+
+// // Задача 67. Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// int rec(int n)
+// {
+//     if (n / 10 == 0 || n < 10 || n % 10 == n)
+//         return n;
+//     return rec(n / 10) + n % 10;
+// }
+
+// Console.Write("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(rec(n));
+
+// Задача 69. Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+int rec(int m, int n)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i, j] = new Random().Next(1, 11); // [1, 10]
-            Console.Write($"{matrix[i, j]} \t");
-        }
-        Console.WriteLine();
-    }
+    if (n == 0)
+        return 1;
+    return m * rec(m, n-1);
 }
-
-
-void SwapFirstLastString(int[,] matrix)
-{
-    int minValue = matrix[0, 0], minRow = 0, minColumn = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (minValue > matrix[i, j])
-            {
-                minValue = matrix[i, j];
-                minRow = i;
-                minColumn = j;
-            }
-        }
-    }
-    Console.WriteLine($"{minValue}({minRow}, {minColumn}) - минимум");   
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        if (i != minRow)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                if (j != minColumn)
-                    Console.Write($"{matrix[i, j]} \t");
-            }
-            Console.WriteLine();
-        }
-    }
-}
-
 Console.Clear();
-Console.Write("Введите размер матрицы: ");
-int[] coord = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
-int[,] matrix = new int[coord[0], coord[1]];
-Console.WriteLine("Начальный массив");
-InputMatrix(matrix);
-Console.WriteLine("Конечный массив");
-SwapFirstLastString(matrix);
+Console.Write("Введите число А: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число Б: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Число А в степени Б равное: {rec(m, n)}");
