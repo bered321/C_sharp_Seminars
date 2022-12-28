@@ -45,6 +45,5 @@ Console.WriteLine("Начальный массив:");
 InputMatrix(matrix);
 PrintMatrix(matrix);
 Console.WriteLine();
-SortMatrix(matrix);
 Console.WriteLine("Конечный массив:");
 PrintMatrix(SortMatrix(matrix));
