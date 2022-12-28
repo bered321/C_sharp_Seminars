@@ -24,8 +24,12 @@ int[,] MultiplicationMatrix(int[,] matrix1, int[,] matrix2)
     {
         for (int j = 0; j < matrix1.GetLength(1); j++)
         {
-            resultMatrix[i, j] = 0;
+            resultMatrix[i, j] = 0;                                 //как просили на семинаре
             resultMatrix[i, j] += matrix1[i, j] * matrix2[i,j];
+        //     for (int k = 0; k < matrix1.GetLength(1); k++)             //по правилам математики
+        // {
+        //     resultMatrix[i, j] += matrix1[i, k] * matrix2[k, j];
+        // }
         }
     }
     return resultMatrix;
